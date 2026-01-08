@@ -1,8 +1,22 @@
 const express = require('express');
 const cors = require('cors');
+const https = require('https');
 const env = require('./config/environment');
 const logger = require('./utils/logger');
 const initializeDatabase = require('./database/init');
+
+// Self-ping to keep Render free tier alive
+const PING_INTERVAL = 5 * 60 * 1000; // 5 minutes
+const PING_URL = process.env.HEALTH_CHECK_URL;
+
+setInterval(() => {
+  https.get(PING_URL, (res) => {
+    logger.debug('Self-ping successful', { statusCode: res.statusCode });
+  }).on('error', (err) => {
+    logger.error('Self-ping failed', { error: err.message });
+  });
+}, PING_INTERVAL);
+
 
 // Import routes
 const authRoutes = require('./routes/auth.routes');
