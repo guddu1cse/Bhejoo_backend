@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const https = require('https');
+const helmet = require('helmet');
+const compression = require('compression');
+const rateLimit = require('express-rate-limit');
 const env = require('./config/environment');
 const logger = require('./utils/logger');
 const initializeDatabase = require('./database/init');
@@ -34,10 +37,25 @@ const { errorHandler, notFound } = require('./middlewares/error.middleware');
 // Initialize Express app
 const app = express();
 
-// Middleware
-app.use(cors());
+// Production Security & Performance Middleware
+app.use(cors()); // Enable CORS
+app.use(helmet()); // Basic security headers
+app.use(compression()); // Gzip compression
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Rate Limiting: Max 100 requests per 15 minutes per IP
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: {
+    success: false,
+    message: 'Too many requests from this IP, please try again after 15 minutes'
+  }
+});
+app.use('/api/', limiter);
 
 // Request logging (basic)
 app.use((req, res, next) => {

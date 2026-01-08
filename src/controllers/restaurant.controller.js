@@ -35,6 +35,38 @@ class RestaurantController {
     }
   }
 
+  static async createRestaurant(req, res, next) {
+    try {
+      const { name, location, description, phone } = req.body;
+      const adminId = req.user.id;
+
+      // Create the restaurant
+      const restaurantId = await Restaurant.create({
+        name,
+        location,
+        description,
+        phone,
+        status: 'active'
+      });
+
+      // Update the user's mapped_id
+      const User = require('../models/mysql/User.model');
+      const userData = await User.findById(adminId);
+      await User.update(adminId, {
+        ...userData,
+        mapped_restaurant: restaurantId
+      });
+
+      res.status(201).json({
+        success: true,
+        message: 'Restaurant created and assigned successfully',
+        data: { restaurantId }
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+
   static async getRestaurantDishes(req, res, next) {
     try {
       const { id } = req.params;

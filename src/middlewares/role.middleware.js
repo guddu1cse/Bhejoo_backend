@@ -1,6 +1,7 @@
 const { ROLES } = require('../utils/constants');
 
 const authorize = (...allowedRoles) => {
+  const roles = allowedRoles.flat();
   return (req, res, next) => {
     if (!req.user) {
       return res.status(401).json({
@@ -9,8 +10,8 @@ const authorize = (...allowedRoles) => {
       });
     }
 
-    if (!allowedRoles.includes(req.user.role)) {
-      require('fs').appendFileSync('debug_logs.txt', `\n[${new Date().toISOString()}] Role Fail: UserRole=${req.user.role} Allowed=${JSON.stringify(allowedRoles)}`);
+    if (!roles.includes(req.user.role)) {
+      require('fs').appendFileSync('debug_logs.txt', `\n[${new Date().toISOString()}] Role Fail: UserRole=${req.user.role} Allowed=${JSON.stringify(roles)}`);
       return res.status(403).json({
         success: false,
         message: 'Access denied. Insufficient permissions.'
