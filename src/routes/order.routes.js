@@ -10,8 +10,5 @@ router.post('/', authenticate, OrderController.createOrder);
 // Get order details (requires authentication)
 router.get('/:id', authenticate, OrderController.getOrderDetails);
 
-// Assign delivery man (admin only)
-router.post('/:id/assign-delivery', authenticate, isAdmin, OrderController.assignDeliveryMan);
-router.post('/:id/auto-assign-delivery', authenticate, isAdmin, OrderController.autoAssignDelivery);
 
 module.exports = router;

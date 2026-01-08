@@ -121,8 +121,13 @@ class DeliveryService {
       logger.warn('AutoAssignOrder failed - no delivery men available', {
         orderId
       });
-      // Do not throw, just return null so order creation doesn't fail
-      return null;
+      // Throw error so the caller knows it failed
+      throw new Error('No delivery partners are currently available');
+    }
+
+    const order = await Order.findById(orderId);
+    if (!order) {
+      throw new Error('Order not found');
     }
 
     // Get all active orders to calculate load
@@ -160,21 +165,23 @@ class DeliveryService {
       nextFreeTime: new Date(selectedDeliveryMan.nextFreeTime).toISOString()
     });
 
-    // We assign but DO NOT change status to 'assigned' if it's currently 'pending' or 'confirmed'
-    // Actually, assignOrderToDeliveryMan updates status to 'assigned'.
-    // User requested: "auto assigned ... when user placed the order".
-    // If we want to keep status flow, we should perhaps just set the ID.
-    // However, existing method assignOrderToDeliveryMan enforces 'PACKED' status check!
-    // I need to BYPASS that check for initial auto-assignment.
+    // If order is packed, we use the formal assignment that updates status
+    if (order.status === ORDER_STATUS.PACKED) {
+      await Order.assignDeliveryMan(orderId, selectedDeliveryMan.id);
 
-    // Direct update to DB to set delivery_man_id without changing status if not packed
-    await require('../config/mysql').execute(
-      'UPDATE orders SET delivery_man_id = ? WHERE id = ?',
-      [selectedDeliveryMan.id, orderId]
-    );
+      // Notify both parties
+      await NotificationService.createNotification(order.user_id, orderId, ORDER_STATUS.ASSIGNED);
+      await NotificationService.createNotification(selectedDeliveryMan.id, orderId, ORDER_STATUS.ASSIGNED);
+    } else {
+      // Direct update to DB to set delivery_man_id without changing status if not packed (initial auto-assign)
+      await require('../config/mysql').execute(
+        'UPDATE orders SET delivery_man_id = ? WHERE id = ?',
+        [selectedDeliveryMan.id, orderId]
+      );
 
-    // Notify Delivery Man
-    await NotificationService.createNotification(selectedDeliveryMan.id, orderId, 'assigned'); // Using 'assigned' as notification type even if status is pending
+      // Notify Delivery Man only
+      await NotificationService.createNotification(selectedDeliveryMan.id, orderId, 'assigned');
+    }
 
     return selectedDeliveryMan;
   }

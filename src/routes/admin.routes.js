@@ -22,6 +22,12 @@ router.patch('/dishes/:id/availability', AdminController.updateDishAvailability)
 router.get('/orders', AdminController.getOrders);
 router.put('/orders/:id/status', AdminController.updateOrderStatus);
 
+// Delivery assignment (requires order controller)
+const OrderController = require('../controllers/order.controller');
+// Assign delivery man (admin only)
+router.post('/orders/:id/assign-delivery', OrderController.assignDeliveryMan);
+router.post('/orders/:id/auto-assign-delivery', OrderController.autoAssignDelivery);
+
 // Notifications
 router.get('/notifications', AdminController.getNotifications);
 
