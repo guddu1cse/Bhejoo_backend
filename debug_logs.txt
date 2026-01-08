@@ -1,69 +1,23 @@
-Server Started at 2026-01-08T09:30:13.233Z
 
-[2026-01-08T09:39:45.471Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:39:45.663Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:41:03.192Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:41:03.230Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:41:03.287Z] Orders Found: 5
-[2026-01-08T09:41:03.379Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:41:03.385Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:41:03.395Z] Orders Found: 5
-[2026-01-08T09:43:09.067Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:43:09.310Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:43:09.312Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:43:09.321Z] Orders Found: 5
-[2026-01-08T09:43:11.301Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:43:11.429Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:43:11.431Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:43:11.438Z] Orders Found: 5
-[2026-01-08T09:43:14.125Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:43:14.258Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:43:14.260Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:43:14.266Z] Orders Found: 5
-[2026-01-08T09:44:31.002Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:44:31.135Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:44:32.549Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:44:33.326Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:44:34.131Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:44:37.084Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:44:37.086Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:44:37.118Z] Orders Found: 5
-[2026-01-08T09:44:37.126Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:44:37.128Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:44:37.130Z] Orders Found: 5
-[2026-01-08T09:46:04.590Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:46:04.802Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:47:01.895Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:47:01.980Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:47:02.032Z] Orders Found: 5
-[2026-01-08T09:47:02.057Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:47:02.066Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:47:02.077Z] Orders Found: 5
-[2026-01-08T09:48:06.668Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:48:06.734Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:48:06.774Z] Orders Found: 5
-[2026-01-08T09:48:06.796Z] Auth Decoded: {"userId":4,"email":"jivan@getvymo.com","role":"Delivery Man","iat":1767864069,"exp":1768468869}
-[2026-01-08T09:48:06.798Z] Req User: {"id":4,"name":"Jivan Beta","email":"jivan@getvymo.com","password":"$2a$10$ucQ1eq3bRu5OT7X9Bj.b4Om4U7x22UpIACII/kRqLF.C0mXOCz7b.","role":"Delivery Man","status":"active","mapped_restaurant":null,"created_at":"2026-01-08T08:45:24.000Z","updated_at":"2026-01-08T08:45:24.000Z"} | ID: 4 | Role: Delivery Man
-[2026-01-08T09:48:06.803Z] Orders Found: 5
-[2026-01-08T09:48:33.795Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:33.887Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:35.389Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:36.174Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:37.174Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:38.126Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:40.088Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:40.793Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:42.399Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:43.223Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:44.424Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:46.040Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:46.884Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:48:48.675Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:50:52.445Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:50:52.777Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:50:52.807Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:52:01.031Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:52:01.090Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:52:04.588Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:53:05.383Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
-[2026-01-08T09:53:05.444Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
+[2026-01-08T12:17:52.773Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:17:52.873Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:17:53.328Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:17:53.480Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:17:54.420Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:17:55.096Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:17:55.190Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:17:55.733Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:17:55.834Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:18:03.543Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
+[2026-01-08T12:18:04.512Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:18:05.231Z] Auth Decoded: {"userId":2,"email":"lokesh@mountblue.tech","role":"user","iat":1767863553,"exp":1768468353}
+[2026-01-08T12:18:59.963Z] Auth Decoded: {"userId":6,"email":"prod_user1@gmail.com","role":"user","iat":1767874724,"exp":1768479524}
+[2026-01-08T12:19:09.931Z] Auth Decoded: {"userId":6,"email":"prod_user1@gmail.com","role":"user","iat":1767874724,"exp":1768479524}
+[2026-01-08T12:19:10.095Z] Auth Decoded: {"userId":6,"email":"prod_user1@gmail.com","role":"user","iat":1767874724,"exp":1768479524}
+[2026-01-08T12:19:22.027Z] Auth Decoded: {"userId":6,"email":"prod_user1@gmail.com","role":"user","iat":1767874724,"exp":1768479524}
+[2026-01-08T12:21:17.928Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:21:18.115Z] Auth Decoded: {"userId":5,"email":"prod@gmail.com","role":"admin","iat":1767874182,"exp":1768478982}
+[2026-01-08T12:21:22.114Z] Auth Decoded: {"userId":6,"email":"prod_user1@gmail.com","role":"user","iat":1767874724,"exp":1768479524}
+[2026-01-08T12:30:42.452Z] Auth Decoded: {"userId":6,"email":"prod_user1@gmail.com","role":"user","iat":1767874724,"exp":1768479524}
+[2026-01-08T12:30:43.327Z] Auth Decoded: {"userId":6,"email":"prod_user1@gmail.com","role":"user","iat":1767874724,"exp":1768479524}
+[2026-01-08T12:30:44.812Z] Auth Decoded: {"userId":6,"email":"prod_user1@gmail.com","role":"user","iat":1767874724,"exp":1768479524}

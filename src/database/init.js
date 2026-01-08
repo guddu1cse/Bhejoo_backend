@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const mysql = require('mysql2/promise');
 const pool = require('../config/mysql');
+const env = require('../config/environment');
 const logger = require('../utils/logger');
 
 /**
@@ -17,6 +19,33 @@ async function initializeDatabase() {
     }
 
     logger.info('Starting database initialization', { sqlPath });
+
+    const dbName = env.MYSQL.database;
+
+    try {
+        // Create a temporary connection without a database selected
+        // We use the config from environment.js (MYSQL object)
+        const connectionConfig = {
+            host: env.MYSQL.host,
+            port: env.MYSQL.port,
+            user: env.MYSQL.user,
+            password: env.MYSQL.password,
+            multipleStatements: true
+        };
+
+        const tempConn = await mysql.createConnection(connectionConfig);
+
+        await tempConn.query(`CREATE DATABASE IF NOT EXISTS ${dbName}`);
+        await tempConn.end();
+
+        // Now ensure the pool is using it
+        await pool.query(`USE ${dbName}`);
+
+        logger.info(`Ensured database '${dbName}' exists and is selected`);
+    } catch (dbError) {
+        logger.error('Failed to create/select database', { dbName, error: dbError.message });
+        throw dbError;
+    }
 
     const rawSql = fs.readFileSync(sqlPath, 'utf8');
 

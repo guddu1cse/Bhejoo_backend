@@ -65,19 +65,25 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/delivery', deliveryRoutes);
 app.use('/api/notifications', notificationRoutes);
 
+const http = require('http');
+const socketUtil = require('./utils/socket');
+
 // Error handling middleware (must be last)
 app.use(notFound);
 app.use(errorHandler);
+
+const server = http.createServer(app);
+socketUtil.init(server);
 
 async function start() {
   try {
     // Ensure database schema exists before handling requests
     await initializeDatabase();
 
-    try { require('fs').writeFileSync('debug_logs.txt', `Server Started at ${new Date().toISOString()}\n`); } catch (e) { console.error('Log Init Failed', e); }
+
 
     const PORT = env.PORT || 3000;
-    app.listen(PORT, () => {
+    server.listen(PORT, () => {
       logger.info('Server started', {
         port: PORT,
         env: env.NODE_ENV,

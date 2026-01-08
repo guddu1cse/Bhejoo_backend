@@ -1,10 +1,6 @@
 -- Bhejoo Database Initialization Script
 -- Run this script to create all necessary tables
 
--- Create database if not exists
-CREATE DATABASE IF NOT EXISTS bhejoo_db;
-USE bhejoo_db;
-
 -- Create restaurants table
 CREATE TABLE IF NOT EXISTS restaurants (
   id INT AUTO_INCREMENT PRIMARY KEY,

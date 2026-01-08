@@ -1,6 +1,7 @@
 const Notification = require('../models/mongo/Notification.model');
 const { ORDER_STATUS } = require('../utils/constants');
 const logger = require('../utils/logger');
+const socketUtil = require('../utils/socket');
 
 class NotificationService {
   static getNotificationTypeFromStatus(status) {
@@ -60,6 +61,10 @@ class NotificationService {
       });
 
       const saved = await notification.save();
+
+      // Emit real-time notification
+      socketUtil.emitToUser(userId, 'new_notification', saved);
+
       logger.debug('Notification created', {
         userId,
         orderId,
@@ -85,6 +90,10 @@ class NotificationService {
       });
 
       const saved = await notification.save();
+
+      // Emit real-time notification to admin
+      socketUtil.emitToUser(adminId, 'new_notification', saved);
+
       logger.debug('Admin notification created', {
         adminId,
         orderId,
