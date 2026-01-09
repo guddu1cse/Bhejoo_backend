@@ -17,7 +17,7 @@ module.exports = {
     password: process.env.MYSQL_PASSWORD || 'Bhejoo@123',
     database: process.env.MYSQL_DATABASE || 'bhejooapp',
     waitForConnections: true,
-    connectionLimit: 10,
+    connectionLimit: 5,
     queueLimit: 0,
     multipleStatements: true
   },

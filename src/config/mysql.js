@@ -22,4 +22,13 @@ pool.getConnection()
     console.error('❌ MySQL Connection Error:', err.message);
   });
 
+// Keep-alive heartbeat (SELECT 1 every 30s)
+setInterval(async () => {
+  try {
+    await pool.query('SELECT 1');
+  } catch (e) {
+    console.error('DB heartbeat failed:', e.message);
+  }
+}, 30000);
+
 module.exports = pool;
